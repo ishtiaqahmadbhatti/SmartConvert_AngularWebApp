@@ -3,10 +3,11 @@ import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
+  standalone: true,
+  imports: [RouterOutlet],
 })
 export class AppComponent {
-  title = 'SmartConvert_Angular';
+  title = 'SmartConvert_AngularWebApp';
 }

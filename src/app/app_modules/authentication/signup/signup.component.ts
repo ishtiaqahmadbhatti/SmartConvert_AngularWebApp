@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NgForm, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UserModel } from '../../../app_controllers/models.controller';
 import { UserService } from '../../../app_controllers/services.controller';
 
@@ -9,7 +10,7 @@ import { UserService } from '../../../app_controllers/services.controller';
   templateUrl: './signup.component.html',
   styleUrl: './signup.component.css',
   standalone: true,
-  imports: [CommonModule, FormsModule, ReactiveFormsModule]
+  imports: [CommonModule, RouterModule, FormsModule, ReactiveFormsModule]
 })
 export class SignupComponent {
   public userModel = new UserModel();
@@ -26,15 +27,16 @@ export class SignupComponent {
     this.userService.SaveUserRecord(this.userModel).subscribe({
       next: (data: any) => {
         debugger;
-        if (data.Validated) {
-          if (this.userModel.ID > 0) {
-            console.log("User Modified Successfully");
-          } else {
-            console.log("New User Added Successfully");
-          }
-        } else {
-          console.log(data.ErrorMessage);
-        }
+        console.log("New User Added Successfully");
+        // if (data.Validated) {
+        //   if (this.userModel.ID > 0) {
+        //     console.log("User Modified Successfully");
+        //   } else {
+        //     console.log("New User Added Successfully");
+        //   }
+        // } else {
+        //   console.log(data.ErrorMessage);
+        // }
       },
       error: (err) => {
         debugger;

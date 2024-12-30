@@ -56,21 +56,26 @@
                             </div>
                         </div>
                         <div class="text-end mb-3">
-                            <a href="authentication/forgot-password" class="text-danger"
-                                style="text-decoration: none;">Forgot Password?</a>
+                            <a routerLink="authentication/forgotpassword" class="text-danger"
+                                style="text-decoration: none; font-weight: bolder;">
+                                Forgot Password?
+                            </a>
                         </div>
 
                         <div class="d-grid">
-                            <button type="submit" [class.disabled]="formData.form.invalid" class="btn btn-danger">Sign
-                                in</button>
+                            <button type="submit" [class.disabled]="formData.form.invalid" class="btn btn-danger">
+                                Sign in
+                            </button>
                         </div>
                     </form>
                 </div>
             </div>
             <div class="text-center mt-3">
                 Don't have an account?
-                <a href="authentication/signup" class="text-danger"
-                    style="text-decoration: none; font-weight: bolder;">Create account</a>
+                <a routerLink="/authentication/signup" class="text-danger"
+                    style="text-decoration: none; font-weight: bolder;">
+                    Create account
+                </a>
             </div>
         </div>
     </div>

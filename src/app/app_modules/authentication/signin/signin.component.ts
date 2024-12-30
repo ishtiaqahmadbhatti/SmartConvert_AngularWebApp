@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NgForm, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 import { UserModel } from '../../../app_controllers/models.controller';
 import { UserService } from '../../../app_controllers/services.controller';
 
@@ -9,7 +10,7 @@ import { UserService } from '../../../app_controllers/services.controller';
   templateUrl: './signin.component.html',
   styleUrl: './signin.component.css',
   standalone: true,
-  imports: [CommonModule, FormsModule, ReactiveFormsModule]
+  imports: [CommonModule, RouterModule, FormsModule, ReactiveFormsModule]
 })
 export class SigninComponent {
   public userModel = new UserModel();
