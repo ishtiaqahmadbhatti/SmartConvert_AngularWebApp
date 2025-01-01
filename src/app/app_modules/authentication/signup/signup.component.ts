@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Router } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UserModel } from '../../../app_controllers/models.controller';
 import { UserService } from '../../../app_controllers/services.controller';
@@ -15,7 +15,8 @@ import { UserService } from '../../../app_controllers/services.controller';
 export class SignupComponent {
   public userModel = new UserModel();
 
-  constructor(private userService: UserService) {
+  constructor(private userService: UserService, private router: Router) {
+    debugger;
   }
 
   ngOnInit() {
@@ -27,16 +28,7 @@ export class SignupComponent {
     this.userService.SaveUserRecord(this.userModel).subscribe({
       next: (data: any) => {
         debugger;
-        console.log("New User Added Successfully");
-        // if (data.Validated) {
-        //   if (this.userModel.ID > 0) {
-        //     console.log("User Modified Successfully");
-        //   } else {
-        //     console.log("New User Added Successfully");
-        //   }
-        // } else {
-        //   console.log(data.ErrorMessage);
-        // }
+          this.router.navigate(['/verification/verifyemailaddress']);
       },
       error: (err) => {
         debugger;
