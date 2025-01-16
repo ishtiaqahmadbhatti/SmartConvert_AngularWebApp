@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 @Injectable({ providedIn: 'root'})
 export class ConvertService {
 
-  private apiUrl =ApplicationConfiguration.Get().ApiServiceLink + 'Convert';
+  private apiUrl =ApplicationConfiguration.Get().ApiServiceLink + 'VideoToAudio';
   constructor(private http: HttpClient) { }
 
 
@@ -47,4 +47,12 @@ export class ConvertService {
     });
   }
   
+  uploadAndConvert(file: File): Observable<Blob> {
+    const formData = new FormData();
+    formData.append('VideoFile', file, file.name);
+
+    return this.http.post(`${this.apiUrl}/convert`, formData, {
+      responseType: 'blob'
+    });
+  }
 }

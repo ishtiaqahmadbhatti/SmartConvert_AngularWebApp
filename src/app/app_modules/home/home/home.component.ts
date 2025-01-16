@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
   selector: 'app-home',
   imports: [FooterComponent],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
 
@@ -31,5 +31,9 @@ export class HomeComponent {
 
   mergePDFs() {
     this.route.navigate(['/convert/merge-pdfs']);
+  }
+
+  convertVideoToAudio(): void {
+    this.route.navigate(['/convert/video-to-audio']);
   }
 }

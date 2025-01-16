@@ -16,5 +16,9 @@ export const ConvertRoutes: Routes = [
   {
     path: 'merge-pdfs',
     loadComponent: () => import('./merge-pdfs/merge-pdfs.component').then(c => c.MergePdfsComponent)
+  },
+  {
+    path: 'video-to-audio',
+    loadComponent: () => import('./video-to-audio/video-to-audio.component').then(c => c.VideoToAudioComponent)
   }
 ];
