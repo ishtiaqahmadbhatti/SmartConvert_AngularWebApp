@@ -7,34 +7,8 @@
     </div>
     <div class="row mt-4">
         <div class="col-md-4">
-            <div class="card shadow-sm clickable-card" (click)="mergePDFs()">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Merge PDF</h5>
-                    <p class="card-text">Combine PDFs in the order you want with the easiest PDF merger available.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card shadow-sm clickable-card">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Split PDF</h5>
-                    <p class="card-text">Separate one page or a whole set for easy conversion into independent PDF
-                        files.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card shadow-sm clickable-card">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Compress PDF</h5>
-                    <p class="card-text">Reduce file size while optimizing for maximal PDF quality.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row mt-4">
-        <div class="col-md-4">
             <div class="card shadow-sm clickable-card" (click)="convertPDFToWord()">
+                <img src="../../../../assets/pdftoword.png" class="card-img-top" alt="Convert PDF to Word">
                 <div class="card-body text-center">
                     <h5 class="card-title">Convert PDF to Word</h5>
                     <p class="card-text">Easily convert your PDF files to editable Word documents.</p>
@@ -43,6 +17,8 @@
         </div>
         <div class="col-md-4">
             <div class="card shadow-sm clickable-card" (click)="convertWordToPDF()">
+                <img src="../../../../assets/wordtopdf.png" class="card-img-top" alt="Convert PDF to Word">
+
                 <div class="card-body text-center">
                     <h5 class="card-title">Convert Word to PDF</h5>
                     <p class="card-text">Convert your Word documents to PDF format quickly and easily.</p>
@@ -51,6 +27,7 @@
         </div>
         <div class="col-md-4">
             <div class="card shadow-sm clickable-card" (click)="convertPDFToImage()">
+                <img src="../../../../assets/pdftoimage.png" class="card-img-top" alt="Convert PDF to Word">
                 <div class="card-body text-center">
                     <h5 class="card-title">Convert PDF to Image</h5>
                     <p class="card-text">Convert your PDF files to high-quality images.</p>
@@ -61,6 +38,7 @@
     <div class="row mt-4">
         <div class="col-md-4">
             <div class="card shadow-sm clickable-card" (click)="convertImageToPDF()">
+                <img src="../../../../assets/imagetopdf.png" class="card-img-top" alt="Convert PDF to Word">
                 <div class="card-body text-center">
                     <h5 class="card-title">Convert Image to PDF</h5>
                     <p class="card-text">Convert your images to PDF format quickly and easily.</p>
@@ -68,15 +46,18 @@
             </div>
         </div>
         <div class="col-md-4">
-            <div class="card shadow-sm clickable-card">
+            <div class="card shadow-sm clickable-card" (click)="convertVideoToAudio()">
+                <img src="../../../../assets/videotoaudio.png" class="card-img-top" alt="Convert Video to Audio">
                 <div class="card-body text-center">
-                    <h5 class="card-title">Convert Excel to PDF</h5>
-                    <p class="card-text">Convert your Excel spreadsheets to PDF format quickly and easily.</p>
+                    <h5 class="card-title">Convert Video to Audio</h5>
+                    <p class="card-text">Extract audio from your video files quickly and easily.</p>
                 </div>
             </div>
         </div>
+        
         <div class="col-md-4">
             <div class="card shadow-sm clickable-card">
+                <img src="../../../../assets/ppttopdf.png" class="card-img-top" alt="Convert Video to Audio" />
                 <div class="card-body text-center">
                     <h5 class="card-title">Convert PowerPoint to PDF</h5>
                     <p class="card-text">Convert your PowerPoint presentations to PDF format quickly and easily.</p>
@@ -86,7 +67,39 @@
     </div>
     <div class="row mt-4">
         <div class="col-md-4">
+            <div class="card shadow-sm clickable-card" (click)="mergePDFs()">
+                <img src="../../../../assets/mergepdfs.png" class="card-img-top" alt="Convert Video to Audio">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Merge PDF</h5>
+                    <p class="card-text">Combine PDFs in the order you want with the easiest PDF merger available.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
             <div class="card shadow-sm clickable-card">
+                <img src="../../../../assets/splitpdf.png" class="card-img-top" alt="Convert Video to Audio">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Split PDF</h5>
+                    <p class="card-text">Separate one page or a whole set for easy conversion into independent PDF
+                        files.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm clickable-card">
+                <img src="../../../../assets/Compresspdf.png" class="card-img-top" alt="Convert Video to Audio" />
+                <div class="card-body text-center">
+                    <h5 class="card-title">Compress PDF</h5>
+                    <p class="card-text">Reduce file size while optimizing for maximal PDF quality.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <div class="card shadow-sm clickable-card">
+                <img src="../../../../assets/pdftotext.png" class="card-img-top" alt="Convert Video to Audio">
                 <div class="card-body text-center">
                     <h5 class="card-title">Convert PDF to Text</h5>
                     <p class="card-text">Extract text from your PDF files easily.</p>
@@ -95,6 +108,7 @@
         </div>
         <div class="col-md-4">
             <div class="card shadow-sm clickable-card">
+                <img src="../../../../assets/texttopdf.png" class="card-img-top" alt="Convert Video to Audio">
                 <div class="card-body text-center">
                     <h5 class="card-title">Convert Text to PDF</h5>
                     <p class="card-text">Convert your text files to PDF format quickly and easily.</p>
@@ -112,11 +126,10 @@
     </div>
     <div class="row mt-4">
         <div class="col-md-4">
-            <div class="card shadow-sm clickable-card" (click)="convertVideoToAudio()">
-                <img src="assets/videotoaudio.webp" class="card-img-top" alt="Convert Video to Audio">
+            <div class="card shadow-sm clickable-card">
                 <div class="card-body text-center">
-                    <h5 class="card-title">Convert Video to Audio</h5>
-                    <p class="card-text">Extract audio from your video files quickly and easily.</p>
+                    <h5 class="card-title">Convert Excel to PDF</h5>
+                    <p class="card-text">Convert your Excel spreadsheets to PDF format quickly and easily.</p>
                 </div>
             </div>
         </div>

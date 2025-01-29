@@ -25,14 +25,14 @@ export class VideoToAudioComponent {
     }
   }
 
-  convertFile(): void {
+  convertVideoToAudio(): void {
     if (!this.selectedFile) {
       alert('Please select a video file first!');
       return;
     }
 
     this.isConverting = true;
-    this.convertService.uploadAndConvert(this.selectedFile).subscribe({
+    this.convertService.convertVideoToAudio(this.selectedFile).subscribe({
       next: (blob: Blob) => {
         const downloadUrl = window.URL.createObjectURL(blob);
         this.downloadUrl = downloadUrl;

@@ -3,7 +3,7 @@
   
     <div>
       <input type="file" (change)="onFileSelected($event)" accept="video/*" />
-      <button (click)="convertFile()" [disabled]="isConverting || !selectedFile">
+      <button (click)="convertVideoToAudio()" [disabled]="isConverting || !selectedFile">
         Convert to Audio
       </button>
     </div>
