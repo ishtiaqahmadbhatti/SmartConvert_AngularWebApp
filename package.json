@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:SmartConvert_AngularWebApp": "node dist/smart-convert-angular-web-app/server/server.mjs"
+    "build:ssr": "ng run smart-convert-angular-web-app:server:production",
+    "serve:ssr": "node dist/smart-convert-angular-web-app/server/server.mjs"
   },
   "private": true,
   "dependencies": {
@@ -22,6 +23,7 @@
     "@angular/router": "^19.0.0",
     "@angular/ssr": "^19.0.6",
     "bootstrap": "^5.3.3",
+    "crypto-js": "^4.2.0",
     "express": "^4.18.2",
     "jquery": "^3.7.1",
     "rxjs": "~7.8.0",
@@ -32,6 +34,7 @@
     "@angular-devkit/build-angular": "^19.0.6",
     "@angular/cli": "^19.0.6",
     "@angular/compiler-cli": "^19.0.0",
+    "@types/crypto-js": "^4.2.2",
     "@types/express": "^4.17.17",
     "@types/jasmine": "~5.1.0",
     "@types/node": "^18.18.0",
